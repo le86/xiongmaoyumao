@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     
+</head>
+<body>
+    <div></div>
+    <script>
+        var div=document.querySelector('div')
+        
+        var Nowtime=new Date();
+        var inputTime=new Date('2021-9-5 0:0:0');
+        var times=(inputTime.getTime()-Nowtime.getTime())/1000;
+        var t=parseInt(times/60/60/24);
+        var h=parseInt(times/60/60); 
+        var m=parseInt(times/60%60);
+        var s=parseInt(times%60);
+        
+        div.innerHTML='离开学还有'+t+'天'+h+'时'+m+'分'+s+'秒';
+      
+     </script>   
+</body>
+</html>
